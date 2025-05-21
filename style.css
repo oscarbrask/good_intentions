@@ -15,7 +15,9 @@ header {
 .navbar {
   position: sticky;
   top: 0;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   /* Transparent white background */
   z-index: 1000;
