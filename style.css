@@ -15,6 +15,7 @@ header {
 .navbar {
   position: sticky;
   top: 0;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
   /* Transparent white background */
   z-index: 1000;
@@ -345,7 +346,7 @@ footer {
 
 
 
-form#contact-form {
+.contact-form {
   max-width: 600px;
   margin: 0 auto;
   /* Center the form */
@@ -357,11 +358,11 @@ form#contact-form {
   /* Subtle shadow */
 }
 
-form#contact-form .form-group {
+.contact-form .form-group {
   margin-bottom: 15px;
 }
 
-form#contact-form label {
+.contact-form label {
   display: block;
   /* Place label above input */
   font-weight: bold;
@@ -370,8 +371,8 @@ form#contact-form label {
   /* Darker text color */
 }
 
-form#contact-form input,
-form#contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -380,14 +381,14 @@ form#contact-form textarea {
   box-sizing: border-box;
 }
 
-form#contact-form input:focus,
-form#contact-form textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   border-color: #007BFF;
   /* Highlight border on focus */
   outline: none;
 }
 
-form#contact-form button {
+.contact-form button {
   display: inline-block;
   background-color: #007BFF;
   /* Button color */
@@ -400,7 +401,7 @@ form#contact-form button {
   transition: background-color 0.3s ease;
 }
 
-form#contact-form button:hover {
+.contact-form button:hover {
   background-color: #0056b3;
   /* Darker blue on hover */
 }
