@@ -43,36 +43,13 @@ header {
   /* Darker blue on hover */
 }
 
-/* header {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-    text-align: center;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
-
-
-/* .header-content {
-    position: relative;
-    z-index: 1;
-    padding: 2rem;
-    transition: transform 0.3s ease;
-  } */
-
-/* .header-content:hover {
-    transform: scale(1.05);
-} */
-
 .scroll-fade-image {
   width: 100%;
   max-height: 80vh;
   /* object-fit: cover; */
   /* margin: 2rem auto; */
   border-radius: 10px;
-  opacity: 0;
+  opacity: 0.99;
   /* transform: translateY(50px); */
   transition: opacity 1s ease, transform 1s ease;
 }
