@@ -1,9 +1,3 @@
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Thank you for your message!');
-  this.reset();
-});
-
 // Lightbox functionality
 const lightbox = document.getElementById('lightbox');
 const lightboxContent = document.getElementById('lightbox-content');
@@ -26,9 +20,9 @@ function showInLightbox(index) {
     const start = media.dataset.start || 0;
     content = document.createElement('iframe');
     content.src =
-        `https://www.youtube.com/embed/${videoId}?autoplay=1&start=${start}`;
+      `https://www.youtube.com/embed/${videoId}?autoplay=1&start=${start}`;
     content.allow =
-        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     content.allowFullscreen = true;
     content.frameBorder = 0;
   } else {
@@ -81,9 +75,9 @@ document.querySelectorAll('.youtube-thumbnail').forEach(thumbnail => {
     const start = thumbnail.dataset.start || 0;
     const iframe = document.createElement('iframe');
     iframe.src =
-        `https://www.youtube.com/embed/${videoId}?autoplay=1&start=${start}`;
+      `https://www.youtube.com/embed/${videoId}?autoplay=1&start=${start}`;
     iframe.allow =
-        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     iframe.allowFullscreen = true;
     iframe.frameBorder = 0;
     iframe.style.width = '100%';
@@ -119,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       fadeImage.classList.remove('visible');
     }
-  }, {threshold: 0.1});
+  }, { threshold: 0.1 });
 
   if (fadeImage) {
     observer.observe(fadeImage);
