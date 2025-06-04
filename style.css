@@ -310,6 +310,22 @@ footer {
   display: block;
 }
 
+#featured_video {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.featured-video-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.featured-video-container img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
 .play-button {
   position: absolute;
   top: 50%;
