@@ -69,25 +69,6 @@ lightboxNext.addEventListener('click', (e) => {
   showInLightbox((currentIndex + 1) % mediaItems.length);
 });
 
-document.querySelectorAll('.youtube-thumbnail').forEach(thumbnail => {
-  thumbnail.addEventListener('click', () => {
-    const videoId = thumbnail.dataset.videoId;
-    const start = thumbnail.dataset.start || 0;
-    const iframe = document.createElement('iframe');
-    iframe.src =
-      `https://www.youtube.com/embed/${videoId}?autoplay=1&start=${start}`;
-    iframe.allow =
-      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-    iframe.allowFullscreen = true;
-    iframe.frameBorder = 0;
-    iframe.style.width = '100%';
-    iframe.style.height = '100%';
-
-    thumbnail.innerHTML = '';
-    thumbnail.appendChild(iframe);
-  });
-});
-
 const fadeImage = document.querySelector('.scroll-fade-image');
 
 const observer = new IntersectionObserver(([entry]) => {
