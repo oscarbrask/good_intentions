@@ -22,6 +22,7 @@ header {
   /* Transparent white background */
   z-index: 1000;
   padding: 10px 20px;
+  height: 50px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   /* Optional: Add shadow for better visibility */
   display: flex;
@@ -29,6 +30,23 @@ header {
   backdrop-filter: blur(10px);
   /* Adds a blur effect for a modern look */
 }
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007BFF;
+}
+
 
 .navbar a {
   text-decoration: none;
@@ -43,6 +61,60 @@ header {
 .navbar a:hover {
   color: #0056b3;
   /* Darker blue on hover */
+}
+
+/* Menu toggle button */
+.menu-toggle {
+  display: none;
+  /* Hidden by default for larger screens */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 568px) {
+  .nav-links {
+    display: none;
+    /* Hide navigation links by default */
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    /* Adjust based on navbar height */
+    right: 20px;
+    background-color: rgba(52, 62, 177, 0.9);
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+    /* Show navigation links when menu is toggled */
+  }
+
+  .menu-toggle {
+    display: block;
+    /* Hidden by default for larger screens */
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    position: absolute;
+    /* Position it relative to the navbar */
+    right: 20px;
+    /* Align it to the right */
+    top: 50%;
+    /* Center it vertically */
+    transform: translateY(-50%);
+    /* Adjust for vertical centering */
+    color: #ffffff;
+    /* Optional: Set the button color */
+    z-index: 1001;
+    /* Ensure it appears above other elements */
+  }
 }
 
 .scroll-fade-image {

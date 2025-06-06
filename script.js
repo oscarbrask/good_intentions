@@ -8,6 +8,20 @@ const lightboxNext = document.getElementById('lightbox-next');
 const mediaItems = Array.from(document.querySelectorAll('.lightbox-item'));
 let currentIndex = -1;
 
+// Toggle the menu when the menu button is clicked
+document.querySelector('.menu-toggle').addEventListener('click', function () {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('show'); // Toggle the "show" class
+});
+
+// Close the menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.remove('show'); // Remove the "show" class
+  });
+});
+
 function showInLightbox(index) {
   const media = mediaItems[index];
   if (!media) return;
